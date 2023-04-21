@@ -1,7 +1,7 @@
 defmodule MakeupJavascript.MixProject do
   use Mix.Project
   @version "0.1.0"
-  @url ""
+  @url "https://github.com/mohammedzeglam-pg/makeup_javascript"
   def project do
     [
       app: :makeup_javascript,
@@ -10,7 +10,9 @@ defmodule MakeupJavascript.MixProject do
       start_permanent: Mix.env() == :prod,
       deps: deps(),
       package: package(),
-      description: description()
+      description: description(),
+      name: :makeup_javascript,
+      source_url: @url
     ]
   end
 
@@ -41,7 +43,8 @@ defmodule MakeupJavascript.MixProject do
   defp deps do
     [
       {:makeup, "~> 1.0"},
-      {:nimble_parsec, "~> 1.2.3 or ~> 1.3"}
+      {:nimble_parsec, "~> 1.2.3 or ~> 1.3"},
+      {:ex_doc, ">= 0.0.0", only: :dev, runtime: false}
     ]
   end
 end
